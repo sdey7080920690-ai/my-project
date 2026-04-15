@@ -16,6 +16,9 @@ app.use('/api/auth', authRouter);
 app.use('/api/todo', todoRouter);
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
 
 
 app.listen(port, () => {
