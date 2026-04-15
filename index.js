@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import authRouter from './src/routes/auth.routes.js';
+import todoRouter from './src/routes/todo.routes.js';
 
 
 const app = express();
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Path specific middleware
 app.use('/api/auth', authRouter);
-// app.use('/api/todo', todoRouter);
+app.use('/api/todo', todoRouter);
 
 // Routes
 

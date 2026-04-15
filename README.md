@@ -1,13 +1,14 @@
 # Backend Project
 
-A Node.js Express backend with authentication functionality.
+A Node.js Express backend with authentication and todo functionality.
 
 ## Features
 
 - User registration
 - User login
 - Password hashing with bcrypt
-- JSON file-based user storage
+- JSON file-based user and todo storage
+- Todo CRUD operations
 
 ## Installation
 
@@ -17,5 +18,12 @@ A Node.js Express backend with authentication functionality.
 
 ## API Endpoints
 
+### Auth
 - POST /api/auth/register
 - POST /api/auth/login
+
+### Todo
+- POST /api/todo/create (body: {title, description, userEmail})
+- GET /api/todo?userEmail=... (query param for filtering)
+- PUT /api/todo/:id (body: {title?, description?, completed?})
+- DELETE /api/todo/:id
